@@ -1,0 +1,16 @@
+development: &defaults
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: email_api_development
+  pool: 5
+  username:
+  password:
+
+production:
+  <<: *defaults
+  database: email_api_production
+
+test:
+  <<: *defaults
+  database: email_api_test
