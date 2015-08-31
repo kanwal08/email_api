@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Instructions - You will need to fire the following curl request: 
 
-Things you may want to cover:
+	curl --basic --header "Content-Type:application/json" --header "Accept:application/json" http://fierce-tundra-8140.herokuapp.com/api/v1/email/ -X POST -d '{ "email": { "to": "shivpkumar@gmail.com", "subject": "hello world", "body": "Hi Shiv! Sending you an email via this awesome API I just made on the interwebs."}, "token": "token_key" }'
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This API is authenticated and would work only with the specified token_key. You need to contact the admin for token_key. However you may play with other attributes.
