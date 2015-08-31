@@ -4,6 +4,8 @@ class Api::V1::EmailController < ApplicationController
   before_filter :authenticate_from_user_token
 
   def create
+    UserMailer.api params[:email]
+    render :nothing => true
   end
   
   def authenticate_from_user_token
